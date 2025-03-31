@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capitulos</title>
+    <link rel="stylesheet" href="../css/style_Comic.css">
+</head> 
+<body>
+    <div class="container">
+    </div>
+
+    <button class="home-btn">
+        <a href="../index.html"><img src="../assets/Img/casa.png" alt="home"></a>
+    </button>
+   <!-- Botón "Another" que abrirá el modal -->
+   <label class="second-btn" for="modalToggle">
+    <img src="../assets/Img/boton.png" alt="Another">
+</label>
+
+<!-- Input invisible que activa el modal -->
+<input type="checkbox" id="modalToggle" class="modal-toggle">
+
+<!-- Modal -->
+<div class="modal">
+    <div class="modal-content">
+            <li>
+                <img src="../assets/Img/icon1.png" alt="Icon 1" class="modal-icon">
+                <span class="modal-point">1. Haz clic en un capítulo para comenzar a leer al terminar se desbloqueara el siguente.</span>
+            </li>
+            <li>
+                <img src="../assets/Img/icon1.png" alt="Icon 2" class="modal-icon">
+                <span class="modal-point">2. Explora los diferentes capítulos disponibles.</span>
+            </li>
+            <li>
+                <img src="../assets/Img/icon1.png" alt="Icon 3" class="modal-icon">
+                <span class="modal-point">3. Se dara mas intrucciones cuando el comic este completo..</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../js/capitulosbd.js"></script>
+<script src="../js/app.js"></script>
+</html>

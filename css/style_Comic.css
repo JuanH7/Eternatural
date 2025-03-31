@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el tamaño */
+}
+
+body {
+    background-image: url(../assets/Img/fondo-SC-1.png);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+    border-radius: 2rem;
+    border: 0.5rem solid rgb(255, 113, 43); /* Borde con el color dorado */
+    width: 90%;
+    max-width: 1200px;
+    min-height: 50vh;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Espaciado entre las tarjetas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra externa */
+    padding: 2rem;
+}
+
+.card {
+    background: linear-gradient(145deg, rgb(255, 113, 43), rgb(255, 113, 43)); /* Fondo con gradiente dorado */
+    width: 100px;
+    height: 150px;
+    border-radius: 1rem;
+    border: 0.3rem solid rgb(255, 113, 43); /* Borde en color púrpura */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: rgb(255, 113, 43);
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Resalta el texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover; /* Imagen de fondo se adapta */
+    background-position: center;
+}
+
+.card:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse */
+    box-shadow: 0 0 15px rgb(255, 113, 43), 0 0 10px rgba(70, 46, 158, 0.6); /* Sombra brillante */
+}
+
+.card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: blur(1.5px);
+}
+
+.card h1 {
+    font-size: 1.5rem;
+}
+
+#num {
+    color: rgb(255, 113, 43);
+    font-size: 3rem;
+}
+.home-btn, .second-btn {
+    position: absolute;
+    bottom: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-btn {
+    left: 20px;
+    background-color: rgb(255, 113, 43);
+  }
+  .home-btn img {
+    width: 30px;
+    height: 30px;
+  }
+  .second-btn {
+    right: 20px;
+    background-color: rgb(114, 114, 114);
+  }
+  .second-btn img {
+    width: 30px;
+    height: 30px;
+  }
+  
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Ocultamos el modal por defecto */
+    position: fixed;
+    z-index: 1; /* Asegura que esté sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 500px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+/* Encabezado del modal */
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: rgb(114, 114, 114);
+    text-align: center;
+}
+
+/* Lista dentro del modal */
+.modal-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.modal-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Estilo para los iconos */
+.modal-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Texto de cada punto */
+.modal-point {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Botón X */
+.close-btn {
+    font-size: 2rem;
+    color: rgb(114, 114, 114);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(114, 114, 114);
+}
+
+/* Modal toggle (checkbox que activa el modal) */
+.modal-toggle {
+    display: none;
+}
+
+/* Mostrar el modal cuando el checkbox está marcado */
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+/* Estilos para el botón Another */
+.second-btn {
+    position: fixed; 
+    right: 20px;
+    bottom: 20px;
+    background-color: rgb(114, 114, 114);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.second-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.second-btn img:hover {
+    background-color: #462E9E;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 200px;
+        height: 250px;
+    }
+
+    .card h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,759 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+  --color1: black;
+  --color2: white;
+  overflow-x: hidden;
+}
+
+/* Fuente personalizada */
+@font-face {
+  font-family: 'RomanAntique';
+  src: url('../assets/fonts/RomanAntique.ttf');
+}
+
+.imagen_inicio {
+  background-image: url(../assets/Img/fondo_inicio.png);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+
+.logo img {
+  width: 20rem;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 610px) {
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--color2);
+      transition: all 0.2s ease-in-out;
+  }
+
+  .menu li {
+      margin-top: 40px;
+  }
+
+  .menu li a {
+      padding: 10px;
+  }
+
+  .open-menu,
+  .close-menu {
+      display: block;
+  }
+
+  #check:checked~.menu {
+      right: 0;
+  }
+}
+
+#about {
+  width: 100%;
+  height: 75vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#about .container {
+  padding-top: 45px;
+}
+
+.textComic {
+  color: #462E9E;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #462E9E;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.heading span {
+  color: #FFD21E;
+}
+
+#about .card {
+  border-radius: 10px;
+}
+
+#about .card img {
+  border-radius: 10px;
+}
+
+#about-btn:hover {
+  background: #FFD21E;
+  color: #462E9E;
+}
+
+/* Media query para pantallas más grandes */
+@media screen and (max-width:982px) {
+  #about p {
+      font-size: 8px;
+  }
+}
+
+/* Media query para pantallas medianas */
+@media screen and (max-width:766px) {
+  #about p {
+      font-size: 15px;
+  }
+
+  #about {
+      height: 120vh;
+  }
+}
+
+.bienvenidos {
+
+  width: 40rem;
+  height: 40rem;
+}
+
+.logonav {
+  width: 25rem;
+}
+
+.banner {
+  background-image: url(../assets/img/piranga\ banner.png);
+  background-size: cover;
+  height: 85vh;
+}
+
+.splash {
+  background-image: url(.assets/img/splash.png);
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100rem;
+  background-position-x: -5%;
+  margin-top: 1rem;
+}
+
+.col-lg-7 {}
+
+.titulos {
+  color: rgb(255, 113, 43);
+  font-family: 'RomanAntique';
+  font-size: 4rem;
+}
+
+.subtitulos {
+  color: rgb(114, 114, 114);
+  font-family: 'RomanAntique';
+  font-size: 4rem;
+}
+
+.welcome {
+  font-family: 'RomanAntique';
+  font-size: 5rem;
+}
+
+.lorem {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+
+/* width 767 para el media query */
+@media screen and (max-width:767px) {
+  .splash {
+      background-size: 70vh;
+      background-position-x: -3rem;
+  }
+
+  .welcom {
+      margin-left: 1rem;
+      margin-bottom: 12rem;
+  }
+
+  .welcome-lorem {
+      color: rgb(117, 115, 115);
+      font-size: 1rem;
+  }
+}
+
+.origen {
+  background-image: url(../assets/img/puertas\ museo.jpg);
+  height: 80vh;
+  background-position-x: -8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.museo {
+  background-color: rgb(68, 0, 0);
+}
+
+.titulos-b {
+  color: white;
+  font-family: 'RomanAntique';
+  font-size: 4rem;
+}
+
+/* cards museo */
+.flip-card {
+  background-color: transparent;
+  width: 20rem;
+  height: 30rem;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  height: 30rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.8rem;
+  background-image: url(../assets/img/pelicano.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/pelicano.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.5;
+}
+
+.cards {
+  background-color: rgb(68, 0, 0);
+}
+
+/* card museo 2 */
+.flip-card-1 {
+  background-color: transparent;
+  width: 20rem;
+  height: 30rem;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title-1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner-1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-1:hover .flip-card-inner-1 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-1,
+.flip-card-back-1 {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  height: 30rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.8rem;
+  background-image: url(../assets/img/boa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-card-back-1 {
+  color: white;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/boa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.5;
+}
+
+/* card 3 */
+.flip-card-2 {
+  background-color: transparent;
+  width: 20rem;
+  height: 30rem;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title-2 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner-2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-2:hover .flip-card-inner-2 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-2,
+.flip-card-back-2 {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  height: 30rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.8rem;
+  background-image: url(../assets/img/garza\ negra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-card-back-2 {
+  color: white;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/garza\ negra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.5;
+}
+
+/* card museo 4 */
+.flip-card-3 {
+  background-color: transparent;
+  width: 20rem;
+  height: 30rem;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title-3 {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner-3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-3:hover .flip-card-inner-3 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-3,
+.flip-card-back-3 {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20rem;
+  height: 30rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1.8rem;
+  background-image: url(../assets/img/rata\ con\ thinner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flip-card-back-3 {
+  color: white;
+  transform: rotateY(180deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/rata\ con\ thinner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1.5;
+}
+
+/* relación con el museo */
+.mural {
+  background-image: url(../assets/img/muralcns.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* sinopsis */
+.shika {
+  background-image: url(../assets/img/shikaa.png);
+  height: 85vh;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+.lorem-n {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+
+.lorem-3 {
+  color: rgb(207, 207, 207);
+  font-size: 1.2rem;
+}
+
+/* trailer */
+.cabeza {
+  height: 50vh;
+  width: 20vh;
+}
+
+/* personajes */
+/* carta */
+.card {
+  color: #f8f8f8;
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #73aaa5b2;
+  background-blend-mode: multiply;
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
+
+.vic {
+  color: #1b1b1b;
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #f5f39db2;
+  background-blend-mode: multiply;
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
+
+.thinner {
+  color: #1b1b1b;
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  outline: 6px solid #f5f5f5;
+  border-radius: 8px;
+  line-height: 150%;
+  padding: 16px;
+  background: #92f5cfb2;
+  background-blend-mode: multiply;
+  transition: background-color 1s ease-in-out;
+  overflow: hidden;
+}
+
+.card-front {
+  bottom: 16px;
+  /* background-image: url(./img/emma\ pj.png); */
+  left: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-back {
+  width: 23rem;
+  height: 25rem;
+  transform: translateX(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+/* Text */
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Text divider */
+.title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-radius: 50%;
+  height: 2px;
+  margin: 2px auto;
+  background-color: #1b1b1b;
+}
+
+/* Hover */
+.card:hover {
+  background-color: #1b1b1b25;
+}
+
+.card:hover .card-front {
+  transform: translateX(-100%);
+}
+
+.card:hover .card-back {
+  transform: translateX(0);
+}
+
+.victor {
+  width: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.darwin {
+  width: 70vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.yo {
+  height: 50vh;
+}
+
+/* From Uiverse.io by david-mohseni */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 80px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+}
+
+
+
+
+
+
+.instagram-circle {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-circle svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.instagram-circle svg:hover {
+  transform: scale(1.2);
+}
+
+.icon.instagram a {
+  text-decoration: none;
+}
+
+.logonav {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon.instagram {
+  margin-right: 20px;
+}
+
+.col-lg-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-lg-9 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+
+/* BOTON SUBIR */
+.go-top-container {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 1rem;
+  height: 1rem;
+  z-index: -1;
+}
+.go-top-button {
+  width: 0rem;
+  height: 0rem;
+  background: rgb(255, 113, 43);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.go-top-button i {
+  position: absolute;
+  font-size: 1.7rem;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgb(117, 115, 115);
+  transition: 0.2s;
+}
+.show {
+  z-index: 10;
+}
+.show .go-top-button {
+  animation: popup 0.3s ease-in-out;
+  width: 4.6rem;
+  height: 4.6rem;
+  z-index: 11;
+}
+.show i {
+  transform: translate(-50%, -50%) scale(1);
+}
